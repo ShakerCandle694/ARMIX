@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tecnologia y Publicidad Armix - Servicios profesionales de tecnología y publicidad">
+    <title>Tecnologia y Publicidad ARMIX - Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <svg width="70" height="70" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                            <linearGradient id="bandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:0.9" />
+                                <stop offset="100%" style="stop-color:#0066cc;stop-opacity:0.7" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Curved bands -->
+                        <path d="M 60 25 Q 75 35 85 40 Q 90 50 85 60 Q 75 70 60 80 Q 45 70 35 60 Q 30 50 35 40 Q 45 35 60 25 Z" 
+                              stroke="url(#bandGradient)" 
+                              stroke-width="3" 
+                              fill="none" 
+                              opacity="0.6"/>
+                        <path d="M 60 25 Q 75 30 80 45 Q 75 55 60 65 Q 45 55 40 45 Q 45 30 60 25 Z" 
+                              stroke="url(#bandGradient)" 
+                              stroke-width="3" 
+                              fill="none" 
+                              opacity="0.5"/>
+                        <path d="M 60 80 Q 75 70 80 85 Q 75 95 60 85 Q 45 95 40 85 Q 45 70 60 80 Z" 
+                              stroke="url(#bandGradient)" 
+                              stroke-width="3" 
+                              fill="none" 
+                              opacity="0.5"/>
+                        
+                        <!-- 8 Circular nodes -->
+                        <circle cx="60" cy="25" r="5" fill="#4FC3F7" opacity="0.9"/>
+                        <circle cx="85" cy="40" r="5" fill="#4FC3F7" opacity="0.9"/>
+                        <circle cx="85" cy="60" r="5" fill="#4FC3F7" opacity="0.9"/>
+                        <circle cx="60" cy="80" r="5" fill="#4FC3F7" opacity="0.9"/>
+                        <circle cx="35" cy="60" r="5" fill="#4FC3F7" opacity="0.9"/>
+                        <circle cx="35" cy="40" r="5" fill="#4FC3F7" opacity="0.9"/>
+                        <circle cx="50" cy="50" r="5" fill="#4FC3F7" opacity="0.9"/>
+                        <circle cx="70" cy="50" r="5" fill="#4FC3F7" opacity="0.9"/>
+                        
+                        <!-- T letter with glow -->
+                        <text x="60" y="60" font-size="55" font-weight="bold" fill="white" 
+                              text-anchor="middle" dominant-baseline="central" filter="url(#glow)"
+                              font-family="Arial, sans-serif">T</text>
+                    </svg>
+                </div>
+                <div class="company-name">
+                    <h1>Tecnologia y Publicidad</h1>
+                    <h2>ARMIX</h2>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Soluciones Tecnológicas y Publicitarias</h1>
+                <p class="hero-subtitle">
+                    Transformamos tu negocio con tecnología de vanguardia y estrategias 
+                    publicitarias innovadoras
+                </p>
+                <a href="#servicios" class="cta-button">Conoce nuestros servicios</a>
+            </div>
+            <div class="hero-decoration">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+                <div class="decoration-circle circle-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="services-container">
+            <div class="services-header">
+                <h2 class="services-title">Nuestros Servicios</h2>
+                <p class="services-subtitle">
+                    Ofrecemos soluciones integrales en tecnología y publicidad
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3 class="service-title">Desarrollo Web</h3>
+                    <p class="service-description">Creamos sitios web modernos, responsivos y optimizados para todos los dispositivos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3 class="service-title">Diseño Gráfico</h3>
+                    <p class="service-description">Diseños creativos e innovadores para tu marca, logotipos, folletos y material publicitario.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3 class="service-title">Marketing Digital</h3>
+                    <p class="service-description">Estrategias de marketing online para aumentar tu presencia y llegar a más clientes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📸</div>
+                    <h3 class="service-title">Redes Sociales</h3>
+                    <p class="service-description">Gestión profesional de redes sociales para potenciar tu marca en internet.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3 class="service-title">Sistemas Personalizados</h3>
+                    <p class="service-description">Desarrollo de software a medida para optimizar los procesos de tu empresa.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="service-title">Consultoría Tecnológica</h3>
+                    <p class="service-description">Asesoramiento profesional para integrar tecnología en tu negocio de manera eficiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tecnologia y Publicidad ARMIX</h3>
+                    <p>Soluciones tecnológicas y publicitarias para tu negocio</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: contacto@armix.com</p>
+                    <p>Teléfono: +52 (000) 000-0000</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Tecnologia y Publicidad ARMIX. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
