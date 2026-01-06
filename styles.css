@@ -412,6 +412,28 @@ body {
     flex-grow: 1;
 }
 
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-link-text {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.service-card:hover .service-link-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* Footer Styles */
 .footer {
     background: linear-gradient(135deg, #001f3f 0%, #000814 100%);
@@ -749,5 +771,144 @@ body {
     .whatsapp-icon {
         width: 26px;
         height: 26px;
+    }
+}
+
+/* Email Floating Button */
+.email-button {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0066cc 0%, #4FC3F7 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 25px rgba(0, 102, 204, 0.5);
+    z-index: 999;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    overflow: hidden;
+    animation: pulse-email 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.email-button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+}
+
+.email-button:hover::before {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.email-button:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 35px rgba(0, 102, 204, 0.6);
+    background: linear-gradient(135deg, #4FC3F7 0%, #0066cc 100%);
+}
+
+.email-icon {
+    width: 28px;
+    height: 28px;
+    fill: white;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.email-button:hover .email-icon {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+.email-tooltip {
+    position: absolute;
+    right: 75px;
+    background: rgba(0, 31, 63, 0.95);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.email-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 8px solid transparent;
+    border-left-color: rgba(0, 31, 63, 0.95);
+}
+
+.email-button:hover .email-tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 80px;
+}
+
+@keyframes pulse-email {
+    0%, 100% {
+        box-shadow: 0 6px 25px rgba(0, 102, 204, 0.5);
+    }
+    50% {
+        box-shadow: 0 6px 35px rgba(0, 102, 204, 0.8), 0 0 0 10px rgba(79, 195, 247, 0.1);
+    }
+}
+
+/* Responsive Email Button */
+@media (max-width: 768px) {
+    .email-button {
+        width: 56px;
+        height: 56px;
+        bottom: 90px;
+        right: 20px;
+    }
+    
+    .email-icon {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .email-tooltip {
+        display: none;
+    }
+    
+    .whatsapp-button {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .email-button {
+        width: 52px;
+        height: 52px;
+        bottom: 80px;
+        right: 15px;
+    }
+    
+    .email-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .whatsapp-button {
+        bottom: 15px;
     }
 }
